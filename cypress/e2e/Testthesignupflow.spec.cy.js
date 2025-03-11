@@ -34,4 +34,5 @@ describe("TestTheSignupFlow", () => {
     cy.get(SignUpPage.LoginButton).first().click();
   });
 
+
 });

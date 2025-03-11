@@ -1,0 +1,15 @@
+cypress.env.json
+node_modules
+cypress/videos/*
+cypress/screenshots/*
+cypress/reports/*
+coverage
+.nyc_output
+.DS_Store
+.env
+cypress/downloads/*
+# IDE settings
+.vscode/*
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
