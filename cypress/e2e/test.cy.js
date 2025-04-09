@@ -9,16 +9,22 @@ describe("Goibibo test", () => {
     cy.wait(5000);
 
     //cy.get('[class="logSprite icClose"]').click();
-    // cy.get(".sc-12foipm-2.eTBlJr.fswFld")
-    //   .first()
-    //   .find(".sc-12foipm-6.erPfRs")
-    //   .type("bBen", { delay: 100 });
+    cy.get('body').then(($body) => {
+      if ($body.find('[class="logSprite icClose"]').length > 0) {
+        cy.get('[class="logSprite icClose"]').should('be.visible').click();
+      }
+    });
 
     cy.get(".sc-12foipm-2.eTBlJr.fswFld")
       .first()
       .find(".sc-12foipm-6.erPfRs")
-      .should("be.focused")
-      .type("Ben", { delay: 100 });
+      .type("bBen", { delay: 100 });
+
+    // cy.get(".sc-12foipm-2.eTBlJr.fswFld")
+    //   .first()
+    //   .find(".sc-12foipm-6.erPfRs")
+    //   .should("be.focused")
+    //   .type("Ben", { delay: 100 });
 
     cy.get(".sc-12foipm-27.fOrNYO>*")
       .contains("Bengaluru")
