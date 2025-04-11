@@ -4,5 +4,5 @@ jobs:
   firstjob:
    runs-on: ubuntu-latest
    steps:
-    -name: print
-    run: echo"hi"
+    - name: print
+    run: echo "hi"
